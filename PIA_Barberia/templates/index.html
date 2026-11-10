@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="barbería, cortes, cuidado personal, Santa Catarina">
+    <meta name="description" content="Barbería en Santa Catarina: cortes, barba y productos de cuidado personal">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <strong class="marca">Barbería Real del Valle</strong>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="cortes.html">Cortes</a>
+                <a href="personal.html">Personal</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+ 
+    <main>
+        <section id="hero">
+            <img src="img/logo.jpg" alt="Logo de la barbería" width="180" height="180">
+            <div>
+                <h1>Barbería Real del Valle</h1>
+                <p>Cortes, barba y cuidado personal en Santa Catarina, Nuevo León.</p>
+                <a class="boton" href="contacto.html">Reserva tu cita</a>
+            </div>
+        </section>
+
+        <section id="quienes">
+            <div>
+                <h2>Quiénes somos</h2>
+                <p>Barbería Real del Valle nació en Santa Catarina con una idea sencilla: que ir a cortarse el cabello sea un buen rato y no un trámite. Empezamos con una sola silla y la meta de hacer bien lo básico.</p>
+                <p>Hoy somos un equipo de barberos que combina el corte clásico con técnicas modernas y productos de cuidado personal, siempre con trato cercano y sin prisas.</p>
+            </div>
+            <img class="foto-lado" src="img/barberia.jpg" alt="Foto de la barbería">
+        </section>
+
+        <section>
+            <h2>Lo que ofrecemos</h2>
+            <div class="cuadricula dos">
+                <div class="cuadro">
+                    <h3>Cortes</h3>
+                    <p>Tijera, degradado, fade y más estilos. Mira la galería y el menú de precios.</p>
+                    <a class="boton" href="cortes.html">Ver cortes</a>
+                </div>
+                <div class="cuadro">
+                    <h3>Catálogo de productos</h3>
+                    <p>Pomadas, ceras y servicios de masaje y spa para mantener tu look.</p>
+                    <a class="boton" href="catalogo.html">Ver catálogo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Derechos Reservados. Barberia Real del Valle</small>
+    </footer>
+</body>
+</html>
