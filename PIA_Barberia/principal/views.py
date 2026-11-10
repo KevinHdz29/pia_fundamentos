@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Producto, Servicio
 
 # Create your views here.
 
@@ -7,7 +8,11 @@ def inicio(request):
 
 
 def catalogo(request):
-    return render(request, 'catalogo.html')
+    datos = {
+        'productos': Producto.objects.all(),
+        'servicios': Servicio.objects.all()
+    }
+    return render(request, 'catalogo.html', context=datos)
 
 
 def cortes(request):

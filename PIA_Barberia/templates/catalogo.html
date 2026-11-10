@@ -30,36 +30,26 @@
         <section>
             <h2>Cuidado del cabello</h2>
             <div class="cuadricula dos">
-                <div class="cuadro">
-                    <img src="img/producto1.jpg" alt="Pomada para cabello">
-                    <h3>Pomada mate</h3>
-                    <p>Fijación media y acabado natural.</p>
-                    <p class="precio"><strong>$180 MXN</strong></p>
-                </div>
-                <div class="cuadro">
-                    <img src="img/producto2.jpg" alt="Cera para cabello">
-                    <h3>Cera texturizante</h3>
-                    <p>Da volumen y textura sin dejar el cabello duro.</p>
-                    <p class="precio"><strong>$160 MXN</strong></p>
-                </div>
+                {% for producto in productos %}
+                    <div class="cuadro">
+                        <h3>{{ producto.nombre }}</h3>
+                        <p>{{ producto.descripcion }}</p>
+                        <p class="precio"><strong>${{ producto.precio }} MXN</strong></p>
+                    </div>
+                {% endfor %}
             </div>
         </section>
 
         <section>
             <h2>Masaje y spa</h2>
             <div class="cuadricula dos">
-                <div class="cuadro">
-                    <img src="img/masaje.jpg" alt="Masaje relajante">
-                    <h3>Masaje relajante</h3>
-                    <p>Cuello y espalda, 30 minutos.</p>
-                    <p class="precio"><strong>$350 MXN</strong></p>
-                </div>
-                <div class="cuadro">
-                    <img src="img/spa.jpg" alt="Spa facial">
-                    <h3>Spa facial</h3>
-                    <p>Limpieza e hidratación de rostro.</p>
-                    <p class="precio"><strong>$300 MXN</strong></p>
-                </div>
+                {% for servicio in servicios %}
+                    <div class="cuadro">
+                        <h3>{{ servicio.nombre }}</h3>
+                        <p>{{ servicio.descripcion }}</p>
+                        <p class="precio"><strong>${{ servicio.precio }} MXN</strong></p>
+                    </div>
+                {% endfor %}
             </div>
         </section>
     </main>
