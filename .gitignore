@@ -1,0 +1,22 @@
+# Entornos virtuales
+venv/
+ambiente/
+Entorno/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Django
+db.sqlite3
+media/
+
+# Variables privadas
+.env
+
+# Visual Studio Code
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
