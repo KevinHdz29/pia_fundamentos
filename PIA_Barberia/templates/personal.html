@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="barberos, estilistas, equipo">
+    <meta name="description" content="Conoce al equipo de estilistas de la barbería">
+    <title>Personal</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <strong class="marca">Barbería Real del Valle</strong>
+            <nav>
+                <a href="{% url 'inicio' %}">Home</a>
+                <a href="{% url 'catalogo' %}">Catálogo</a>
+                <a href="{% url 'cortes' %}">Cortes</a>
+                <a href="{% url 'personal' %}">Personal</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Conoce a nuestros tres mejores estilistas</h1>
+        <p>Cada uno con su especialidad, para que elijas con quién cortarte.</p>
+ 
+        <section>
+            <div class="cuadricula tres">
+                <div class="cuadro">
+                    <img src="img/estilista1.jpg" alt="Kevin Hernández">
+                    <h3>Kevin Hernández</h3>
+                    <p>Especialidad: degradados y fade.</p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/estilista2.jpg" alt="Antonella Galaviz">
+                    <h3>Antonella Galaviz</h3>
+                    <p>Especialidad: corte con tijera.</p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/estilista3.jpg" alt="Gael Hernandez">
+                    <h3>Gael Hernandez</h3>
+                    <p>Especialidad: barba y afeitado clásico.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Más del equipo</h2>
+            <div class="cuadricula tres">
+                <p><em>Aquí aparecerán los estilistas registrados en la base de datos.</em></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Derechos Reservados. Barberia Real del Valle</small>
+    </footer>
+</body>
+</html>

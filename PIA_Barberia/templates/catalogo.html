@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pomada, cera, masaje, spa, cuidado personal">
+    <meta name="description" content="Catálogo de productos y servicios de cuidado personal">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <strong class="marca">Barbería Real del Valle</strong>
+            <nav>
+                <a href="{% url 'inicio' %}">Home</a>
+                <a href="{% url 'catalogo' %}">Catálogo</a>
+                <a href="{% url 'cortes' %}">Cortes</a>
+                <a href="{% url 'personal' %}">Personal</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+ 
+    <main>
+        <h1>Productos de cuidado personal</h1>
+        <p>Lo que usamos en la barbería y lo que puedes llevarte a casa.</p>
+
+        <section>
+            <h2>Cuidado del cabello</h2>
+            <div class="cuadricula dos">
+                <div class="cuadro">
+                    <img src="img/producto1.jpg" alt="Pomada para cabello">
+                    <h3>Pomada mate</h3>
+                    <p>Fijación media y acabado natural.</p>
+                    <p class="precio"><strong>$180 MXN</strong></p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/producto2.jpg" alt="Cera para cabello">
+                    <h3>Cera texturizante</h3>
+                    <p>Da volumen y textura sin dejar el cabello duro.</p>
+                    <p class="precio"><strong>$160 MXN</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Masaje y spa</h2>
+            <div class="cuadricula dos">
+                <div class="cuadro">
+                    <img src="img/masaje.jpg" alt="Masaje relajante">
+                    <h3>Masaje relajante</h3>
+                    <p>Cuello y espalda, 30 minutos.</p>
+                    <p class="precio"><strong>$350 MXN</strong></p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/spa.jpg" alt="Spa facial">
+                    <h3>Spa facial</h3>
+                    <p>Limpieza e hidratación de rostro.</p>
+                    <p class="precio"><strong>$300 MXN</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Derechos Reservados. Barberia Real del Valle</small>
+    </footer>
+</body>
+</html>

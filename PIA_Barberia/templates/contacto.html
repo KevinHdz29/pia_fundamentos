@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="contacto, citas, ubicación, horarios">
+    <meta name="description" content="Contacto, ubicación y horarios de la barbería en Santa Catarina">
+    <title>Contactanos!</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <strong class="marca">Barbería Real del Valle</strong>
+            <nav>
+                <a href="{% url 'inicio' %}">Home</a>
+                <a href="{% url 'catalogo' %}">Catálogo</a>
+                <a href="{% url 'cortes' %}">Cortes</a>
+                <a href="{% url 'personal' %}">Personal</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+ 
+    <main>
+        <h1>Contáctanos</h1>
+        <p>Escríbenos o visítanos para agendar tu cita.</p>
+
+        <section class="cuadricula dos">
+            <div class="cuadro">
+                <h2>Información general</h2>
+                <p><strong>Teléfono:</strong> <a href="tel:+528100000000">81 0000 0000</a></p>
+                <p><strong>Correo:</strong> <a href="mailto:barberiarealdelvalle@gmail.com">barberiarealdelvalle@gmail.com</a></p>
+
+                <h3>Horarios de atención</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes a viernes</td>
+                            <td>10:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>9:00 - 19:00</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>Cerrado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cuadro">
+                <h2>Ubicación</h2>
+                <p>Estamos en Santa Catarina, Nuevo León.</p>
+                <address>Col. Real del Valle, Santa Catarina, Nuevo León, México</address>
+        
+                <div class="mapa">
+                    <iframe src="" frameborder="0" title="Mapa de la sucursal"></iframe>
+                </div>
+            </div>
+
+            <div class="cuadro" id="formulario">
+                <h2>Déjanos un mensaje</h2>
+                <form action="">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+
+                    <label for="correo">Correo:</label>
+                    <input type="text" name="correo" id="correo">
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" name="telefono" id="telefono">
+
+                    <label for="servicio">Servicio de interés:</label>
+                    <select name="servicio" id="servicio">
+                        <option value="1">Corte con tijera</option>
+                        <option value="2">Degradado / Fade</option>
+                        <option value="3">Arreglo de barba</option>
+                        <option value="4">Masaje o spa</option>
+                    </select>
+
+                    <label for="fecha">Fecha preferida para tu cita:</label>
+                    <input type="date" name="fecha" id="fecha">
+
+                    <label for="comentarios">Comentarios o solicitud de cita:</label>
+                    <textarea rows="6" name="comentarios" id="comentarios"></textarea>
+
+                    <input type="button" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Derechos Reservados. Barberia Real del Valle</small>
+    </footer>
+</body>
+</html>

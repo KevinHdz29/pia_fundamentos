@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="cortes de cabello, degradado, fade, tijera">
+    <meta name="description" content="Estilos de corte y menú de servicios con precios">
+    <title>Cortes y Servicios</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <strong class="marca">Barbería Real del Valle</strong>
+            <nav>
+                <a href="{% url 'inicio' %}">Home</a>
+                <a href="{% url 'catalogo' %}">Catálogo</a>
+                <a href="{% url 'cortes' %}">Cortes</a>
+                <a href="{% url 'personal' %}">Personal</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+ 
+    <main>
+        <h1>Estilos de corte</h1>
+        <p>Algunas referencias para que llegues con una idea clara.</p>
+
+        <section>
+            <h2>Galería de estilos</h2>
+            <div class="cuadricula dos">
+                <div class="cuadro">
+                    <img src="img/corte-tijera.jpg" alt="Corte con tijera">
+                    <h3>Corte con tijera</h3>
+                    <p>Corte clásico, natural y con movimiento.</p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/degradado.jpg" alt="Degradado">
+                    <h3>Degradado</h3>
+                    <p>Transición suave de los lados hacia arriba.</p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/fade.jpg" alt="Fade">
+                    <h3>Fade</h3>
+                    <p>Degradado a piel, limpio y marcado.</p>
+                </div>
+                <div class="cuadro">
+                    <img src="img/taper-fade.jpg" alt="Taper fade">
+                    <h3>Taper fade</h3>
+                    <p>Degradado discreto en patillas y nuca.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Menú de servicios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Corte con tijera</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>Degradado / Fade</td>
+                        <td>$170</td>
+                    </tr>
+                    <tr>
+                        <td>Arreglo de barba</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Corte + barba</td>
+                        <td>$230</td>
+                    </tr>
+                    <tr>
+                        <td>Tratamiento capilar</td>
+                        <td>$200</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Precios en pesos mexicanos (MXN)</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Derechos Reservados. Barberia Real del Valle</small>
+    </footer>
+</body>
+</html>
